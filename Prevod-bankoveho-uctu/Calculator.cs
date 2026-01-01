@@ -4,17 +4,17 @@ using System.Text;
 
 namespace Prevod_bankoveho_uctu
 {
-    internal class Calculator: Movies
+    internal class Calculator
     {
-       public void Main(string[] args)
+       public void Main(string args)
         {            
             Console.WriteLine("Zadajte číslo Vášho účtu:");
-            double num1 = Convert.ToDouble(Console.ReadLine());
+            decimal num1 = Convert.ToDecimal (Console.ReadLine());
             Console.WriteLine("Zadajte číslo účtu od kina:");
-            double num2 = Convert.ToDouble(Console.ReadLine());
+            decimal num2 = Convert.ToDecimal(Console.ReadLine());
 
             char operation = '+';
-            double result = 0;
+            decimal result = 0;
             switch (operation)
             {
                 case '+':

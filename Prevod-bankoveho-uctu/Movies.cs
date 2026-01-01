@@ -8,17 +8,19 @@ namespace Prevod_bankoveho_uctu
 {
     internal class Movies
     {      
-        public static void Main(string[] args)
+        public void Main(string[] args)
         {
-            string fileName = @"C:\Users\kolku\OneDrive\Desktop\Ulohy prax\Polrocny projekt\Movie.txt";
-            if (!File.Exists(fileName))
+            string folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string fileName = "Movie.txt";
+            string fileLocale = Path.Combine(folder, fileName);
+            if (!File.Exists(fileLocale))
             {
                 Console.WriteLine("Súbor s používateľskými filmami neexistuje.");
                 Console.ReadKey();
                 return;
             }
 
-            string[] movies = File.ReadAllLines(fileName);
+            string[] movies = File.ReadAllLines(fileLocale);
 
             if (movies.Length == 0)
             {
@@ -81,7 +83,7 @@ namespace Prevod_bankoveho_uctu
 
                     if (snackChoice.ToLower() == "to je všetko")
                     {
-                        break;
+                        
                     }
 
                     string snackName = "";

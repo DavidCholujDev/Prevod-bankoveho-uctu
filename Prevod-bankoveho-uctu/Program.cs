@@ -3,8 +3,5 @@
 
 namespace Prevod_bankoveho_uctu
 {
-    internal class Program
-    {
-        
-    }
+    //Movies movie = new Movies();
 }
