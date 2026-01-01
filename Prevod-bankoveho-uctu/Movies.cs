@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace Prevod_bankoveho_uctu
 {
     internal class Movies
-    {      
-        public void Main(string[] args)
+    {
+        public void Main()
         {
             string folder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             string fileName = "Movie.txt";
@@ -83,7 +84,7 @@ namespace Prevod_bankoveho_uctu
 
                     if (snackChoice.ToLower() == "to je všetko")
                     {
-                        
+
                     }
 
                     string snackName = "";
@@ -120,33 +121,36 @@ namespace Prevod_bankoveho_uctu
                         }
 
                         Console.WriteLine($"{snackName} – pridané {count} ks.");
+
                     }
                     else
                     {
                         Console.WriteLine("Neplatný počet.");
+
                     }
                 }
             }
             else
             {
                 Console.WriteLine("Rozumiem, žiadny snack.");
-            }
 
-            Console.WriteLine("\nVybrali ste si tieto snacky:");
 
-            if (selectedSnacks.Count == 0)
-            {
-                Console.WriteLine("Žiadne snacky.");
-            }
-            else
-            {
-                foreach (var snack in selectedSnacks)
+                Console.WriteLine("\nVybrali ste si tieto snacky:");
+
+                if (selectedSnacks.Count == 0)
                 {
-                    Console.WriteLine($"- {snack.Key}: {snack.Value} ks");
+                    Console.WriteLine("Žiadne snacky.");
                 }
-            }
+                else
+                {
+                    foreach (var snack in selectedSnacks)
+                    {
+                        Console.WriteLine($"- {snack.Key}: {snack.Value} ks");
+                    }
+                }
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
         }
     }
 }

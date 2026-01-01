@@ -4,9 +4,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace Prevod_bankoveho_uctu
 {
-    internal class Pad: Movies
+    internal class Pad
     {
-        public void Main(string[] args)
+        public  void ui()
         {
             // horny lavy roh
             Console.SetCursorPosition(10, 2);
